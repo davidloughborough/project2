@@ -5,9 +5,7 @@ library(zoo)
 library(RcppRoll)
 library(ggplot2)
 library(reshape)
-```
 
-```{r}
 data(secref)
 data(yearly)
 data(daily.1998)
