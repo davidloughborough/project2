@@ -5,7 +5,7 @@ library(zoo)
 library(RcppRoll)
 library(ggplot2)
 library(reshape)
-
+get_data <- function() {
 data(secref)
 data(yearly)
 data(daily.1998)
@@ -54,6 +54,8 @@ monthly_TV1 <- cleaned_data %>%
   summarize(monthly_TV = mean(daily_turnover))
 
 left_join(monthly_TV1, monthly_returns1, by = c("symbol", "monthYear")) -> data
+return(data)
+}
 
 prior_returns <- function(data_, months){
   data_ %>%
