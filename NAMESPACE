@@ -1,1 +1,11 @@
-exportPattern("^[[:alpha:]]+")
+import(ws.data)
+import(dplyr)
+import(lubridate)
+import(zoo)
+import(RcppRoll)
+import(ggplot2)
+import(reshape)
+
+export(prior_TV)
+export(prior_returns)
+export(future_returns)
